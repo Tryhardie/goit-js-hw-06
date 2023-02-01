@@ -14,7 +14,9 @@ const images = [
 ];
 
 const galleryList = document.querySelector(".gallery");
-console.log(galleryList);
+
+galleryList.style.display = "flex";
+galleryList.style.flexDirection = "column";
 
 const imagesList = images
   .map(
@@ -24,8 +26,3 @@ const imagesList = images
   .join("");
 
 galleryList.insertAdjacentHTML("afterbegin", imagesList);
-
-const imgRef = document.querySelector(".gallery__img");
-
-galleryList.style.display = "flex";
-galleryList.style.flexDirection = "column";
